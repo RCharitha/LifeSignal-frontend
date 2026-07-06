@@ -1,0 +1,181 @@
+.nearby-users-container {
+  background: white;
+  border-radius: 20px;
+  margin-bottom: 20px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.nearby-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.header-icon {
+  font-size: 1.2rem;
+}
+
+.nearby-header h3 {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.user-count {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+}
+
+.nearby-content {
+  padding: 20px;
+}
+
+.nearby-stats {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.stat {
+  background: #f7fafc;
+  padding: 12px;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.stat-value {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #667eea;
+}
+
+.stat-label {
+  font-size: 0.75rem;
+  color: #718096;
+}
+
+.users-list {
+  max-height: 300px;
+  overflow-y: auto;
+  margin-bottom: 15px;
+}
+
+.user-card {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 12px;
+  background: #f7fafc;
+  border-radius: 12px;
+  margin-bottom: 10px;
+  transition: all 0.3s ease;
+}
+
+.user-card:hover {
+  background: #edf2f7;
+  transform: translateX(5px);
+}
+
+.user-avatar {
+  width: 45px;
+  height: 45px;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.user-info {
+  flex: 1;
+}
+
+.user-name {
+  font-weight: 600;
+  color: #2d3748;
+  margin-bottom: 5px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.nearby-badge {
+  background: #48bb78;
+  color: white;
+  font-size: 0.65rem;
+  padding: 2px 8px;
+  border-radius: 12px;
+}
+
+.user-distance {
+  font-size: 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-bottom: 3px;
+  color: #718096;
+}
+
+.user-phone {
+  font-size: 0.7rem;
+  color: #a0aec0;
+}
+
+.alert-info {
+  background: #ebf8ff;
+  padding: 12px;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  color: #2c5282;
+  text-align: center;
+}
+
+.no-users {
+  text-align: center;
+  padding: 40px;
+  color: #718096;
+}
+
+.no-users p {
+  margin: 0 0 5px 0;
+}
+
+.no-users small {
+  font-size: 0.75rem;
+}
+
+@media (max-width: 768px) {
+  .nearby-stats {
+    gap: 10px;
+  }
+  
+  .stat-value {
+    font-size: 1.2rem;
+  }
+  
+  .user-card {
+    flex-wrap: wrap;
+  }
+  
+  .user-info {
+    min-width: 150px;
+  }
+}
