@@ -3,7 +3,7 @@ import { io } from 'socket.io-client';
 let socket = null;
 
 export const initializeSocket = (userId, latitude, longitude, fullName) => {
-  socket = io('http://localhost:5000', {
+  socket = io('https://lifesignal-backend.onrender.com', {
     transports: ['websocket'],
     autoConnect: true
   });

@@ -58,7 +58,7 @@ function Dashboard() {
 
   const fetchNearbyUsers = async () => {
     try {
-      const response = await fetch(`http://localhost:5000/api/auth/nearby-users?latitude=${currentLocation?.lat}&longitude=${currentLocation?.lng}`, {
+      const response = await fetch(`https://lifesignal-backend.onrender.com/api/auth/nearby-users?latitude=${currentLocation?.lat}&longitude=${currentLocation?.lng}`, {
         headers: { 'Authorization': `Bearer ${localStorage.getItem('token')}` }
       });
       const data = await response.json();
@@ -73,7 +73,7 @@ function Dashboard() {
     const priority = hasFullSelection ? 'HIGH' : 'MEDIUM';
     
     try {
-      const response = await fetch('http://localhost:5000/api/auth/sos/send', {
+      const response = await fetch('https://lifesignal-backend.onrender.com/api/auth/sos/send', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', 'Authorization': `Bearer ${localStorage.getItem('token')}` },
         body: JSON.stringify({ emergencyType: selectedEmergency, impactLevel: selectedImpact, priority, alertCount, location: currentLocation })

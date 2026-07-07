@@ -72,7 +72,7 @@ function Login() {
 
     try {
       // Send login request to backend
-      const response = await fetch('http://localhost:5000/api/auth/login', {
+      const response = await fetch('https://lifesignal-backend.onrender.com/api/auth/login', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -107,7 +107,7 @@ function Login() {
       }
     } catch (error) {
       console.error('Login error:', error);
-      setLoginError('Cannot connect to server. Please make sure the backend is running on port 5000');
+      setLoginError('Cannot connect to the server. Please try again later.');
     } finally {
       setIsLoading(false);
     }
